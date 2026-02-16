@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Navigation Bar</title>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Navigation bar styling */
+  .navbar {
+    display: flex;
+    align-items: center;
+    background-color: #007bff; /* Blue color */
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  /* Logo / A icon */
+  .logo {
+    font-size: 24px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  /* Navigation links */
+  .nav-links {
+    display: flex;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+
+  .nav-links a:hover {
+    background-color: rgba(255,255,255,0.2);
+  }
+
+  /* Search box */
+  .search-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 300px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+  }
+
+  /* Icons on the right side */
+  .icons-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .icon-link {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Dropdown styles */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: #ffffff;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Responsive adjustments can be added if needed */
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <!-- A icon (using Font Awesome) -->
+  <div class="logo" title="A Icon">
+    <i class="fas fa-anchor"></i>
+  </div>
+
+  <!-- Navigation links -->
+  <div class="nav-links">
+    <a href="#">Docs</a>
+    <a href="#">Examples</a>
+    <a href="#">Icons</a>
+    <a href="#">Blog</a>
+  </div>
+
+  <!-- Search box -->
+  <div class="search-container">
+    <input type="text" class="search-box" placeholder="Search..." />
+  </div>
+
+  <!-- Icons on the right -->
+  <div class="icons-right">
+    <!-- GitHub Icon -->
+    <a class="icon-link" href="https://github.com" target="_blank" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <!-- X Platform Icon (using Font Awesome 'x' icon) -->
+    <a class="icon-link" href="#" title="X Platform">
+      <i class="fas fa-xmark"></i>
+    </a>
+    <!-- Facebook Icon -->
+    <a class="icon-link" href="https://facebook.com" target="_blank" title="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+
+    <!-- Dropdown icons for version selection -->
+    <div class="dropdown">
+      <button class="dropdown-button" title="Versions">
+        <i class="fas fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Version 1</a>
+        <a href="#">Version 2</a>
+        <a href="#">Version 3</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropdown-button" title="More Versions">
+        <i class="fas fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Version 1</a>
+        <a href="#">Version 2</a>
+        <a href="#">Version 3</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Optional: Add JavaScript if needed for additional interactivity -->
+<script>
+  // No additional JavaScript needed for basic dropdown behavior as CSS handles it.
+  // But you can add scripts here if needed.
+</script>
+
+</body>
+</html>
